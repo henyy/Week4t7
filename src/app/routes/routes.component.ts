@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class RoutesComponent implements OnInit {
 
   private routes: any = [];
-  private user: any;
+  private user: any = {};
 
   constructor(private digitransitService: DigitransitService, private router: Router) {
   }
