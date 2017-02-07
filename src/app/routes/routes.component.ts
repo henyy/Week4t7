@@ -12,9 +12,12 @@ export class RoutesComponent implements OnInit {
 
   private routes: any = [];
   private user: any = {};
+<<<<<<< HEAD
   private key: string = "AIzaSyBMRAqbQDzkJxe9QAEA9KRiIEiCnoIZtkY";
   private url: string = `https://www.google.com/maps/embed/v1/place?key=${this.key}&q=Mannerheimintie`;
   private time: string = '';
+=======
+>>>>>>> origin/master
 
   constructor(private digitransitService: DigitransitService, private router: Router) {
   }
