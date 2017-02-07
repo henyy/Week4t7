@@ -11,7 +11,10 @@ import {Router} from "@angular/router";
 export class RoutesComponent implements OnInit {
 
   private routes: any = [];
-  private user: any;
+  private user: any = {};
+  private key: string = "AIzaSyBMRAqbQDzkJxe9QAEA9KRiIEiCnoIZtkY";
+  private url: string = `https://www.google.com/maps/embed/v1/place?key=${this.key}&q=Mannerheimintie`;
+  private time: string = '';
 
   constructor(private digitransitService: DigitransitService, private router: Router) {
   }
@@ -43,7 +46,8 @@ export class RoutesComponent implements OnInit {
         try {
           const lat = resp[Object.keys(resp)[0]].VP.lat;
           const lon = resp[Object.keys(resp)[0]].VP.long;
-          window.open(`https://maps.google.fi/maps/place/${lat}+${lon}`);
+          this.time = resp[Object.keys(resp)[0]].VP.tst;
+          this.url = `https://www.google.com/maps/embed/v1/place?key=${this.key}&q=${lat},${lon}`;
         } catch (e) {
           alert('Not in transit.');
         }

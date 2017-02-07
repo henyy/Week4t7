@@ -10,6 +10,8 @@ import {Router} from "@angular/router";
 export class SetupComponent implements OnInit {
 
   //private stop: any = '';
+  private key: string = "AIzaSyBMRAqbQDzkJxe9QAEA9KRiIEiCnoIZtkY";
+  private url: string = `https://www.google.com/maps/embed/v1/place?key=${this.key}&q=Mannerheimintie`;
 
   constructor(private digitransitService: DigitransitService, private router: Router) {
   }

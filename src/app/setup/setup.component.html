@@ -1,3 +1,5 @@
+<div class="container">
+  <div>
 <form #prefForm="ngForm" (ngSubmit)="setPrefrences(prefForm.value)">
   <p>
     <label>
@@ -24,5 +26,13 @@
     </label>
   </p>
     <button type="submit">Set stop</button>
-  <button onclick="localStorage.clear();">Remove user data</button>
 </form>
+  </div>
+<div>
+<iframe
+  width="100%"
+  height="450"
+  [src]="url | safe" allowfullscreen>
+</iframe>
+</div>
+</div>
